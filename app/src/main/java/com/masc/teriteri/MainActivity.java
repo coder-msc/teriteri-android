@@ -32,9 +32,12 @@ public class MainActivity extends Activity {
 
         // 设置 WebViewClient 以在 WebView 中处理页面导航
         webView.setWebViewClient(new WebViewClient());
+        String url = getIntent().getStringExtra("url");
 
         // 加载网页
-        webView.loadUrl("http://192.168.0.104:3000/");
+//        webView.loadUrl("http://192.168.0.105:3000/");
+        webView.loadUrl(url);
+
 //        webView.loadUrl("https://www.pdai.tech/md/interview/x-interview.html");
         webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         webView.getSettings().setJavaScriptEnabled(true);
